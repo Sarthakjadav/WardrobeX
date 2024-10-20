@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="wardrobeX.css" />
+    <title>WardrobeX Bag</title>
+
+    <button class="bag-button" onclick="itemsinbag() ">Add To Bag</button>
+    <button class="wish-button" onclick="itemsinwishlist() ">Wishlist</button>
+
+    <button class="addplusone-button" onclick="alert('item added'); ">
+      Add 1+1
+    </button>
+    <h1 id="cart-bag"></h1>
+    <h1 id="cart-wishlist"></h1>
+
+    <script>
+      var cartQuantity = 0;
+
+      var wishQuantity = 0;
+      function itemsinbag() {
+        onclick = ".bag-button";
+
+        cartQuantity = cartQuantity + 1;
+        document.querySelector("#cart-bag").innerText =
+          "Total Items " + cartQuantity + "";
+      }
+      function itemsinwishlist() {
+        onclick = ".wish-button";
+
+        wishQuantity = wishQuantity + 1;
+        document.querySelector("#cart-wishlist").innerText =
+          "Total Items in wishlist " + wishQuantity + "";
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
